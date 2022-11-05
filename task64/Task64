@@ -6,3 +6,35 @@
 
 // N = 5 -> "5, 4, 3, 2, 1"
 // N = 8 -> "8, 7, 6, 5, 4, 3, 2, 1"
+
+
+// Метод 1 - при помощи добавления через string
+
+
+string NatureDigitsInterval(int b)
+{
+    if (b == 1)
+    {
+        return "1";
+    }
+    else
+        return b + " " + NatureDigitsInterval(b - 1);
+}
+Console.WriteLine(NatureDigitsInterval(5));
+
+// Метод 2 - математический с выводом через консоль
+
+int NaturalDigits(int d)
+{
+    if (d == 1)
+    {
+        return 1;
+    }
+    else
+    {
+        Console.Write($"{d} ");
+
+    return NaturalDigits(d - 1);
+    }
+}
+Console.WriteLine(NaturalDigits(8));
